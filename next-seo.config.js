@@ -1,19 +1,19 @@
-const title = "Daniel Wirtz";
-const description = "Designer, tech enthusiast and entrepreneur of sorts";
+const title = "DannyChain";
+const description = "Entrepreneur | Developer | Trader | Admin at hypnochain.com | Hive-Engine Witness";
 
 const SEO = {
   title,
   description,
-  canonical: "https://danielwirtz.com",
+  canonical: "https://dannychain.vercel.app",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://danielwirtz.com",
+    url: "https://dannychain.vercel.app",
     title,
     description,
     images: [
       {
-        url: "https://danielwirtz.com/static/images/banner.jpg",
+        url: "https://dannychain.vercel.app/static/images/banner.jpg",
         alt: title,
         width: 2240,
         height: 1260,
@@ -21,8 +21,8 @@ const SEO = {
     ],
   },
   twitter: {
-    handle: "@wirtzdan",
-    site: "@wirtzdan",
+    handle: "@Danny_Chain",
+    site: "@Danny_Chain",
     cardType: "summary_large_image",
   },
 };

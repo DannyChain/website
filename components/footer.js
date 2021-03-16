@@ -2,7 +2,6 @@ import React from "react";
 import {
   HStack,
   Button,
-  useColorMode,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -38,7 +37,7 @@ const Footer = () => {
         py={4}
       >
         <Text fontSize="sm" color={useColorModeValue("gray.500", "gray.600")}>
-          © {date} Daniel Wirtz{" "}
+          © {date} DannyChain{" "}
         </Text>
         <HStack spacing={4}>
           <FooterLink href="/disclaimer" name="Disclaimer" />

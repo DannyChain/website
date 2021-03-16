@@ -1,17 +1,13 @@
 import React from "react";
-import Head from "next/head";
 import {
   Button,
   Box,
   VStack,
-  HStack,
   Text,
-  IconButton,
   Link,
   Heading,
   SimpleGrid,
 } from "@chakra-ui/react";
-import Container from "../components/container";
 import PageTransition from "../components/page-transitions";
 import Section from "@/components/section";
 import { TwitterLogo } from "phosphor-react";
@@ -24,49 +20,28 @@ const Home = ({ projects }) => (
       <VStack spacing={12}>
         <Section>
           <VStack spacing={4} align="start" fontSize="2xl">
-            <Heading size="xl">Hey, I'm Daniel 👋</Heading>
+            <Heading size="xl">Hey, I'm Danny 👋</Heading>
             <VStack>
               <Text>
-                I'm a designer, developer and entrepreneur of sorts. Born and
-                raised in Germany and now living in the Netherlands.
+                Hello guys, my name is Daniela, and I am from Brazil. I'm a "discreet" entrepreneur, a trader, a tech enthusiast, and a hobbyist developer.
               </Text>
               <Text>
-                By day, I'm working at{" "}
-                <Link variant="text" href="https://crisp.studio" isExternal>
-                  Crisp Studio
-                </Link>{" "}
-                where I'm currently building the education platform and
-                community at{" "}
-                <Link
+                In my spare time, I publish some art pieces on <Link
                   variant="text"
-                  href="https://www.facilitator.school"
+                  href="https://nftshowroom.com/dannychain/gallery/?r=dannychain"
                   isExternal
                 >
-                  Facilitator School
-                </Link>
-                .
-              </Text>
-              <Text>
-                In my spare time, I develop small web apps and{" "}
-                <Link
+                  NFT Showroom
+                </Link>  and I also develop <Link
                   variant="text"
-                  href="https://chrome.google.com/webstore/detail/roam-highlighter/hponfflfgcjikmehlcdcnpapicnljkkc?hl=en"
+                  href="https://github.com/DannyChain"
                   isExternal
                 >
-                  browser extensions
-                </Link>{" "}
-                that make life easier for other people. I also hang out on{" "}
-                <Link
-                  variant="text"
-                  href="https://twitter.com/wirtzdan"
-                  isExternal
-                >
-                  Twitter
-                </Link>
-                , where I learn, think and work in public.
+                  awkward stuff
+                </Link>.
               </Text>
             </VStack>
-            <Link href="https://twitter.com/wirtzdan" isExternal>
+            <Link href="https://twitter.com/Danny_Chain" isExternal>
               <Button
                 colorScheme="blue"
                 rounded="xl"
