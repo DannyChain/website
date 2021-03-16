@@ -1,26 +1,16 @@
 import React from "react";
 import {
-  chakra,
   VStack,
   HStack,
   Button,
-  IconButton,
-  useColorMode,
   Text,
   Box,
-  Divider,
   useColorModeValue,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuCommand,
-  MenuDivider,
   Icon,
-  Avatar,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Container from "./container";
@@ -30,9 +20,7 @@ import {
   Bookmark,
   BookOpen,
   ChevronDown,
-  ChevronDownOutline,
   LightningBolt,
-  Menu as MenuIcon,
 } from "heroicons-react";
 import Link from "next/link";
 import AvatarNavigation from "./avatar-navigation";
@@ -42,14 +30,8 @@ function NavLink(props) {
   var isActive = false;
   const { pathname } = useRouter();
 
-  if (href !== "/") {
-    const [, group] = href.split("/");
-
-    isActive = pathname.includes(group);
-  } else {
-    if (href === pathname) {
-      isActive = true;
-    }
+  if (href === pathname) {
+    isActive = true;
   }
 
   return (
@@ -84,17 +66,9 @@ const Header = () => {
     >
       <Container>
         <VStack align="start" spacing={0}>
-          {/* <NextLink href="/" passHref>
-            <chakra.a display="block" aria-label="Home">
-              <Text fontSize="2xl" fontWeight="bold">
-                Daniel Wirtz
-              </Text>
-            </chakra.a>
-          </NextLink> */}
           <HStack justify="space-between" w="100%" h={16}>
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>
-              <NavLink href="/about" name="About" />
               <NavLink href="https://hivel.ink/@dannychain" name="Blog" />
               <Menu>
                 <MenuButton
