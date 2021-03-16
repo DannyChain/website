@@ -95,7 +95,7 @@ const Header = () => {
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>
               <NavLink href="/about" name="About" />
-              <NavLink href="/blog" name="Blog" />
+              <NavLink href="https://hivel.ink/@dannychain" name="Blog" />
               <Menu>
                 <MenuButton
                   as={Button}
