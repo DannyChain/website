@@ -3,26 +3,13 @@ import {
   VStack,
   HStack,
   Button,
-  Text,
   Box,
   useColorModeValue,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Icon,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Container from "./container";
 import { useRouter } from "next/router";
 import ThemeToggle from "./theme-toggle";
-import {
-  Bookmark,
-  BookOpen,
-  ChevronDown,
-  LightningBolt,
-} from "heroicons-react";
-import Link from "next/link";
 import AvatarNavigation from "./avatar-navigation";
 
 function NavLink(props) {
@@ -69,56 +56,10 @@ const Header = () => {
           <HStack justify="space-between" w="100%" h={16}>
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>
-              <NavLink href="https://hivel.ink/@dannychain" name="Blog" />
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="ghost"
-                  size="md"
-                  px={4}
-                  rightIcon={<ChevronDown size={18} />}
-                >
-                  Links
-                </MenuButton>
-                <MenuList>
-                  <Link href="/books">
-                    <MenuItem>
-                      <HStack>
-                        <Icon
-                          as={BookOpen}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Books</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/bookmarks">
-                    <MenuItem>
-                      <HStack>
-                        <Icon
-                          as={Bookmark}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Bookmarks</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/tools">
-                    <MenuItem>
-                      <HStack>
-                        <Icon
-                          as={LightningBolt}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Tools</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                </MenuList>
-              </Menu>
+              <NavLink href="/" name="Home" />
+              <NavLink href="https://peakd.com/@dannychain" name="Blog" />
+              <NavLink href="/bookmarks" name="Bookmarks" />
+              <NavLink href="/tools" name="Tools" />
             </HStack>
             <HStack>
               <ThemeToggle />
