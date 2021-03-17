@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  chakra,
   Icon,
   VStack,
   HStack,
@@ -13,18 +12,13 @@ import {
   TabPanel,
   useColorModeValue,
   SimpleGrid,
-  Box,
-  Wrap,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
 import { getTable } from "@/lib/airtable";
 import Section from "@/components/section";
-import BookCard from "@/components/book-card";
-
-import BookSuggestion from "@/components/book-suggestion";
-import { BookOpen, DesktopComputer, Heart } from "heroicons-react";
+import { DesktopComputer } from "heroicons-react";
 import sorter from "sort-isostring";
-import { AndroidLogo, AppleLogo, Globe, Monitor } from "phosphor-react";
+import { AndroidLogo } from "phosphor-react";
 import ToolCard from "../components/tool-card";
 import { Chrome } from "react-feather";
 
@@ -65,8 +59,8 @@ const Tools = ({ tools }) => {
                 mt={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={AppleLogo} weight="fill" />
-                  <Text>Mac</Text>
+                  <Icon as={DesktopComputer} weight="fill" />
+                  <Text>Desktop</Text>
                 </HStack>
               </Tab>
               <Tab
@@ -120,7 +114,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform === "Mac")
+                    .filter((t) => t.fields.Platform === "Desktop")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard
@@ -156,7 +150,7 @@ const Tools = ({ tools }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
                   {tools
-                    .filter((t) => t.fields.Platform === "Chrome")
+                    .filter((t) => t.fields.Platform === "Browser")
                     .sort((x, y) => sorter(y.fields.ID, x.fields.ID))
                     .map((tool) => (
                       <ToolCard

@@ -23,7 +23,7 @@ const Home = ({ projects }) => (
             <Heading size="xl">Hey, I'm Danny 👋</Heading>
             <VStack>
               <Text>
-                Hello guys, my name is Daniela, and I am from Brazil. I'm a "discreet" entrepreneur, a trader, a tech enthusiast, and a hobbyist developer.
+                Hi there! My name is Daniela, and I am from Brazil. I'm a "discreet" entrepreneur, a trader, a tech enthusiast, and a hobbyist developer.
               </Text>
               <Text>
                 In my spare time, I publish some art pieces on <Link
@@ -32,7 +32,7 @@ const Home = ({ projects }) => (
                   isExternal
                 >
                   NFT Showroom
-                </Link>  and I also develop <Link
+                </Link>  and I also like to develop <Link
                   variant="text"
                   href="https://github.com/DannyChain"
                   isExternal

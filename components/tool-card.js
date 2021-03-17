@@ -4,13 +4,8 @@ import {
   VStack,
   Text,
   useColorModeValue,
-  Tag,
-  TagLabel,
-  TagRightIcon,
   Box,
-  AspectRatio,
   Link,
-  Image as ChakraImage,
 } from "@chakra-ui/react";
 import Image from "./image";
 import { usePalette } from "react-palette";
